@@ -1,10 +1,15 @@
 version: 3
 
 tasks:
-  deps:
+  cache:
     cmd: deno cache deps.ts 
 
   dev:
     deps:
-      - deps
-    cmd: deno task dev
+      - cache
+    cmd: deno task start
+
+  img:
+    cmds: 
+      - docker build -t deno-hono .
+      - docker run --rm -p 8000:8000 deno-hono

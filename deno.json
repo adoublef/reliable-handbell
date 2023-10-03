@@ -1,7 +1,7 @@
 {
     "tasks": {
-        "dev": "deno run -A cmd/deno-hono/main.ts --watch",
-        "cache": "deno cache -r deps.ts"
+        "cache": "deno cache -r deps.ts",
+        "start": "deno run -A --unstable cmd/deno-hono/main.ts"
     },
     "compilerOptions": {
         "jsx": "react-jsx",
