@@ -12,6 +12,7 @@
         "$valibot/": "https://deno.land/x/valibot@v0.18.0/",
         "$hono/": "https://deno.land/x/hono@v3.7.3/",
         "hono/jsx/jsx-runtime": "https://deno.land/x/hono@v3.7.3/jsx/jsx-runtime.ts",
-        "~/deps.ts": "./deps.ts"
+        "~/deps.ts": "./deps.ts",
+        "~/lib/": "./lib/"
     }
 }

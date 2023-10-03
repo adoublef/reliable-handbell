@@ -1,5 +1,6 @@
 import { Hono } from "~/deps.ts";
 import { handleIndex } from "./handle_index.tsx";
+import { serve } from "../../lib/serve.ts";
 
 if (
     import.meta.main
@@ -8,5 +9,6 @@ if (
 
     app.get("/", handleIndex());
 
-    await Deno.serve({ port: 8000 }, app.fetch).finished;
+    await serve(app);
 }
+
