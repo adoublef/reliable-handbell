@@ -1,0 +1,10 @@
+version: 3
+
+tasks:
+  deps:
+    cmd: deno cache deps.ts 
+
+  dev:
+    deps:
+      - deps
+    cmd: deno task dev
