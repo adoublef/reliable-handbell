@@ -8,5 +8,5 @@ if (
 
     app.get("/", handleIndex());
 
-    await Deno.serve(app.fetch).finished;
+    await Deno.serve({ port: 8000 }, app.fetch).finished;
 }

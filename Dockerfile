@@ -1,7 +1,7 @@
 ARG DENO_VERSION=1.37.0
 
-FROM denoland/deno:${DENO_VERSION} AS deploy
-WORKDIR /opt
+FROM denoland/deno:${DENO_VERSION} AS build
+WORKDIR /app
 
 USER deno
 
@@ -12,6 +12,19 @@ ADD . .
 
 RUN deno cache cmd/deno-hono/main.ts
 
-CMD ["task", "start"]
+# ? --------------------------------
+
+FROM gcr.io/distroless/cc AS final
+WORKDIR /app
+
+COPY --from=build /etc/passwd /etc/passwd
+COPY --from=build /etc/group /etc/group
+
+COPY --from=build --chown=deno:deno /deno-dir /root/.cache/deno
+COPY --from=build --chown=deno:deno /usr/bin/deno deno
+
+COPY . .
+
+CMD ["./deno", "run", "-A", "--unstable", "cmd/deno-hono/main.ts"]
 
 EXPOSE 8000
