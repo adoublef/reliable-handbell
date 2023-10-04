@@ -20,10 +20,11 @@ export function handleAbout(): Handler {
                 <main>
                     <hgroup>
                         <h1>About</h1>
-                        <h2>This is an abouts page</h2>
-                    </hgroup></main>
+                        <h2>Still under construction 👷🏿</h2>
+                    </hgroup>
+                </main>
                 <footer>
-                    <small>Powered by Deno</small>
+                    <small>Powered by <a hx-boost={false} href="https://deno.com">Deno</a></small>
                 </footer>
             </Html>
         );

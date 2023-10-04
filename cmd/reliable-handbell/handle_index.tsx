@@ -31,9 +31,16 @@ export function handleIndex(): Handler {
                         </ul>
                     </nav>
                 </header>
-                <main>hello {name ?? "world"} from deno</main>
+                <main>
+                    <hgroup>
+                        <h1>
+                            Hello, {name ?? "world"}!
+                        </h1>
+                        <h2>Still under construction 👷🏿</h2>
+                    </hgroup>
+                </main>
                 <footer>
-                    <small>Powered by Deno</small>
+                    <small>Powered by <a hx-boost={false} href="https://deno.com">Deno</a></small>
                 </footer>
             </Html>
         );
