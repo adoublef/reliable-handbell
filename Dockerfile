@@ -10,7 +10,7 @@ RUN deno cache deps.ts
 
 ADD . .
 
-RUN deno cache cmd/deno-hono/main.ts
+RUN deno cache cmd/reliable-handbell/main.ts
 
 # ? --------------------------------
 
@@ -25,6 +25,6 @@ COPY --from=build --chown=deno:deno /usr/bin/deno deno
 
 COPY . .
 
-CMD ["./deno", "run", "-A", "--unstable", "cmd/deno-hono/main.ts"]
+CMD ["./deno", "task", "start"]
 
 EXPOSE 8000

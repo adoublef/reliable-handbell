@@ -7,9 +7,18 @@ tasks:
   dev:
     deps:
       - cache
-    cmd: deno task start
+    cmd: infisical run --env=dev --path=reliable-handbell -- deno task start
+
+  env:
+    cmds:
+      - infisical secrets --env=dev --path=reliable-handbell {{.CLI_ARGS}}
 
   img:
     cmds: 
-      - docker build -t deno-hono .
-      - docker run --rm -p 8000:8000 deno-hono
+      - docker build -t reliable-handbell .
+      - docker run --rm -p 8000:8000 reliable-handbell
+
+  htmx:
+    cmds:
+      - curl -L -o static/htmx.min.js https://unpkg.com/htmx.org@latest/dist/htmx.min.js
+      - curl -L -o static/hyperscript.min.js https://unpkg.com/hyperscript.org@latest/dist/_hyperscript.min.js

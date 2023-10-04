@@ -1,6 +1,6 @@
 import { Hono } from "~/deps.ts";
 import { handleIndex } from "./handle_index.tsx";
-import { serve } from "../../lib/serve.ts";
+import { serve } from "~/lib/serve.ts";
 
 if (
     import.meta.main

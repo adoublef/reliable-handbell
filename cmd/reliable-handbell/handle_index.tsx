@@ -16,6 +16,6 @@ export function handleIndex(): Handler {
     return c => {
         const { q: name } = parseDto(c.req.query());
 
-        return c.html(<strong>hello, {name ?? "world"}</strong>);
+        return c.html(<strong>hello {name ?? "world"} from deno</strong>);
     };
 }
