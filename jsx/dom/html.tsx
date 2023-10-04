@@ -1,7 +1,7 @@
 import { HtmlEscapedString, html } from "~/deps.ts";
 
 export const Html = ({
-    head: { title, baseUrl },
+    head: { title },
     children,
 }: {
     head: HeadProps,
@@ -14,7 +14,6 @@ export const Html = ({
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
-    <base href="${new URL(baseUrl).origin}" />
     <link rel="preload" as="font" href="https://assets.adoublef.dev/4/poppins.ttf" type="font/ttf" crossorigin />
     <link rel="preload" as="font" href="https://assets.adoublef.dev/7/poppins.ttf" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="https://assets.adoublef.dev/typography/style.css">
