@@ -7,11 +7,11 @@ tasks:
   dev:
     deps:
       - cache
-    cmd: infisical run --env=dev --path=reliable-handbell -- deno task start
+    cmd: infisical run --env=dev --path=reliable-handbell --secret-overriding -- deno task start
 
   env:
     cmds:
-      - infisical secrets --env=dev --path=reliable-handbell {{.CLI_ARGS}}
+      - infisical secrets --path=reliable-handbell {{.CLI_ARGS}}
 
   img:
     cmds: 
