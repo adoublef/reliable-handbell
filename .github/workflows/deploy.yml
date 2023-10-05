@@ -29,6 +29,6 @@ jobs:
         name: 🚀 Upload & Deploy
         uses: denoland/deployctl@v1
         with:
-            project: "typhoon-awe"
-            entrypoint: "cmd/typhoon-awe/main.ts"
+            project: "reliable-handbell"
+            entrypoint: "cmd/reliable-handbell/main.ts"
             root: "."
