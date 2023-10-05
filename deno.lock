@@ -1,5 +1,86 @@
 {
   "version": "3",
+  "packages": {
+    "specifiers": {
+      "npm:libsql": "npm:libsql@0.1.24",
+      "npm:libsql@0.1.23": "npm:libsql@0.1.23",
+      "npm:libsql@0.1.24": "npm:libsql@0.1.24"
+    },
+    "npm": {
+      "@libsql/darwin-arm64@0.1.23": {
+        "integrity": "sha512-+V9aoOrZ47iYbY5NrcS0F2bDOCH407QI0wxAtss0CLOcFxlz/T6Nw0ryLK31GabklJQAmOXIyqkumLfz5HT64w==",
+        "dependencies": {}
+      },
+      "@libsql/darwin-arm64@0.1.24": {
+        "integrity": "sha512-owp/uw6cgcf7Y5kj+oh0sF0nZgdmjd3NCsgawwRVWrBf5tHlZs5JaohnKEs+CoqYTgDSbTJw/6xjcJ8oFa6NlQ==",
+        "dependencies": {}
+      },
+      "@libsql/darwin-x64@0.1.23": {
+        "integrity": "sha512-toHo7s0HiMl4VCIfjhGXDe9bGWWo78eP8fxIbwU6RlaLO6MNV9fjHY/GjTWccWOwyxcT+q6X/kUc957HnoW3bg==",
+        "dependencies": {}
+      },
+      "@libsql/darwin-x64@0.1.24": {
+        "integrity": "sha512-b8vgkEEyPwARbL97bKu0TTy5HcvfFfmU8W/uP2MC3R2ZI1Lw9mdedtfgDCKXwYPjxdi6CIgW/eP5tD17wwgD8g==",
+        "dependencies": {}
+      },
+      "@libsql/linux-x64-gnu@0.1.23": {
+        "integrity": "sha512-U11LdjayakOj0lQCHDYkTgUfe4Q+7AjZZh8MzgEDF/9l0bmKNI3eFLWA3JD2Xm98yz65lUx95om0WKOKu5VW/w==",
+        "dependencies": {}
+      },
+      "@libsql/linux-x64-gnu@0.1.24": {
+        "integrity": "sha512-ZsqoQlokii5+AUSL9bO6/qaITnn2VW4Fdwnuxe0vgskrt+Sq5LG61MyN55ckSxsSxgKRaKEXl6eNUdw5L7CyUA==",
+        "dependencies": {}
+      },
+      "@libsql/linux-x64-musl@0.1.23": {
+        "integrity": "sha512-8UcCK2sPVzcafHsEmcU5IDp/NxjD6F6JFS5giijsMX5iGgxYQiiwTUMOmSxW0AWBeT4VY5U7G6rG5PC8JSFtfg==",
+        "dependencies": {}
+      },
+      "@libsql/linux-x64-musl@0.1.24": {
+        "integrity": "sha512-31voT85aAHkky59l4/1ikOrXsPJG7TqIl4GlAIOC+3INzTzS0AMUk66wwmJ8UVKH+Ep5MFV2KdWGtHmcOIdhiQ==",
+        "dependencies": {}
+      },
+      "@libsql/win32-x64-msvc@0.1.23": {
+        "integrity": "sha512-HAugD66jTmRRRGNMLKRiaFeMOC3mgUsAiuO6NRdRz3nM6saf9e5QqN/Ppuu9yqHHcZfv7VhQ9UGlAvzVK64Itg==",
+        "dependencies": {}
+      },
+      "@libsql/win32-x64-msvc@0.1.24": {
+        "integrity": "sha512-EWYVE/uZUqeG/BzvYdaoWhCIEbWCTHMmP247MynyIt/puDvOmI8Xvp2S6wdZI2a8xJe3DYNwRgNGB7v4T93xPg==",
+        "dependencies": {}
+      },
+      "@neon-rs/load@0.0.4": {
+        "integrity": "sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==",
+        "dependencies": {}
+      },
+      "detect-libc@2.0.2": {
+        "integrity": "sha512-UX6sGumvvqSaXgdKGUsgZWqcUyIXZ/vZTrlRT/iobiKhGL0zL4d3osHj3uqllWJK+i+sixDS/3COVEOFbupFyw==",
+        "dependencies": {}
+      },
+      "libsql@0.1.23": {
+        "integrity": "sha512-Nf/1B2Glxvcnba4jYFhXcaYmicyBA3RRm0LVwBkTl8UWCIDbX+Ad7c1ecrQwixPLPffWOVxKIqyCNTuUHUkVgA==",
+        "dependencies": {
+          "@libsql/darwin-arm64": "@libsql/darwin-arm64@0.1.23",
+          "@libsql/darwin-x64": "@libsql/darwin-x64@0.1.23",
+          "@libsql/linux-x64-gnu": "@libsql/linux-x64-gnu@0.1.23",
+          "@libsql/linux-x64-musl": "@libsql/linux-x64-musl@0.1.23",
+          "@libsql/win32-x64-msvc": "@libsql/win32-x64-msvc@0.1.23",
+          "@neon-rs/load": "@neon-rs/load@0.0.4",
+          "detect-libc": "detect-libc@2.0.2"
+        }
+      },
+      "libsql@0.1.24": {
+        "integrity": "sha512-Pcq9W3bQsrb8gLycc7vai19rWSoWc/RrKes35PxECe8UOV3JS51VmrXNrFUZCtpsPLQuasghtEOGT95raZ7YHA==",
+        "dependencies": {
+          "@libsql/darwin-arm64": "@libsql/darwin-arm64@0.1.24",
+          "@libsql/darwin-x64": "@libsql/darwin-x64@0.1.24",
+          "@libsql/linux-x64-gnu": "@libsql/linux-x64-gnu@0.1.24",
+          "@libsql/linux-x64-musl": "@libsql/linux-x64-musl@0.1.24",
+          "@libsql/win32-x64-msvc": "@libsql/win32-x64-msvc@0.1.24",
+          "@neon-rs/load": "@neon-rs/load@0.0.4",
+          "detect-libc": "detect-libc@2.0.2"
+        }
+      }
+    }
+  },
   "remote": {
     "https://deno.land/std@0.202.0/assert/assert.ts": "9a97dad6d98c238938e7540736b826440ad8c1c1e54430ca4c4e623e585607ee",
     "https://deno.land/std@0.202.0/assert/assertion_error.ts": "4d0bde9b374dfbcbe8ac23f54f567b77024fb67dbb1906a852d67fe050d42f56",
@@ -459,6 +540,8 @@
     "https://esm.sh/v132/@neon-rs/load@0.0.4/denonext/load.mjs": "aef19702c2526e8aa07f25c944acff8d0a2ec8aa15d452516180b9a224d14785",
     "https://esm.sh/v132/detect-libc@2.0.2/denonext/detect-libc.mjs": "f5bb961de27e9018e924e0b7d50c1951a6879c885670dd41239eff07df247cc3",
     "https://esm.sh/v132/js-base64@3.7.5/denonext/js-base64.mjs": "d75fad7e1e294f521f73b0ccfa0935252ec663191ab8afd5ace9036552a5e44d",
+    "https://esm.sh/v132/libsql@0.1.23": "e4aa56655d8baf0b7c2a009b3cb748b44e85ce98904d02b0269b5c0576792bf9",
+    "https://esm.sh/v132/libsql@0.1.23/denonext/libsql.mjs": "63cda7d1fc729a8a4ca4d39b6123f5f9c10cc7d0ccbe4298c1e414addcd824bd",
     "https://esm.sh/v132/libsql@0.1.24": "1f8c773341b77d394c18375bcb5f3950271ca61e27e4e4467b08f72b5ec0ff39",
     "https://esm.sh/v132/libsql@0.1.24/denonext/libsql.mjs": "49fdd9c65b6809a79bedb28c4967de4764163d7ee21abc5dd5c8205c7cbb9503"
   }
