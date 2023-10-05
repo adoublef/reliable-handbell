@@ -4,7 +4,7 @@ import { serve } from "~/lib/serve.ts";
 import { handleIndex } from "./handle_index.tsx";
 import { handleAbout } from "./handle_about.tsx";
 import { handleError } from "./handle_error.tsx";
-import { ping } from "~/lib/turso.ts";
+import { ping, turso } from "~/lib/turso.ts";
 import { createClient } from "~/lib/libsql/mod.ts";
 
 if (
@@ -15,6 +15,7 @@ if (
 
     const app = new Hono()
         .use("*", logger())
+        .use("*", turso(db))
         .onError((_err, c) => c.redirect("/ouch"));
 
     app.get("/", handleIndex());

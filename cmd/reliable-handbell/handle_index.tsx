@@ -1,10 +1,10 @@
-import { HTTPException, Handler, Output, Status, maxBytes, object, optional, parse, string } from "~/deps.ts";
+import { Client, HTTPException, Handler, Output, Status, maxBytes, object, optional, parse, string, transform } from "~/deps.ts";
 import { Html } from "~/jsx/dom/html.tsx";
 
 export function handleIndex(): Handler {
-    const dto = object({
+    const dto = transform(object({
         q: optional(string([maxBytes(8)]))
-    });
+    }), ({ q }) => ({ q: q ?? "world" }));
 
     const parseDto = (data: unknown): Output<typeof dto> => {
         try {
@@ -15,9 +15,19 @@ export function handleIndex(): Handler {
     };
 
     // TODO -- getName from database
+    const getName = async (c: Client, name: string) => {
+        // NOTE -- throw internal error if there is an error
+        const rs = ((await c.execute({
+            sql: "SELECT ?", args: [name]
+        })).rows.at(0)!);
 
-    return c => {
-        const { q: name } = parseDto(c.req.query());
+        return (rs)[0] as string;
+    };
+
+    return async (c) => {
+        const { q } = parseDto(c.req.query());
+
+        const name = await getName(c.get("db"), q)
 
         return c.html(
             <Html head={{ title: "Home" }}>
@@ -36,10 +46,14 @@ export function handleIndex(): Handler {
                 <main>
                     <hgroup>
                         <h1>
-                            Hello, {name ?? "world"}!
+                            Hello, {name}!
                         </h1>
                         <h2>Still under construction 👷🏿</h2>
                     </hgroup>
+                    <p>
+                        For the meantime you can set your name via the header using the <code>q</code> parameter.
+                        The maximum value for this is 20. You will be greeted in the header
+                    </p>
                 </main>
                 <footer>
                     <small>
