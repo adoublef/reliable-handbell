@@ -1,10 +1,10 @@
-import { Handler, } from "~/deps.ts";
 import { Html } from "~/jsx/dom/html.tsx";
+import { Handler } from "~/deps.ts";
 
-export function handleAbout(): Handler {
-    return c => {
+export function handleError(): Handler {
+    return (c) => {
         return c.html(
-            <Html head={{ title: "About" }}>
+            <Html head={{ title: "Oh, no!" }}>
                 <header>
                     <nav>
                         <ul>
@@ -19,8 +19,10 @@ export function handleAbout(): Handler {
                 </header>
                 <main>
                     <hgroup>
-                        <h1>About</h1>
-                        <h2>Still under construction 👷🏿</h2>
+                        <h1>
+                            Oh, no!
+                        </h1>
+                        <h2>Looks like we found an error</h2>
                     </hgroup>
                 </main>
                 <footer>

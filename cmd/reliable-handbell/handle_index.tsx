@@ -14,11 +14,13 @@ export function handleIndex(): Handler {
         }
     };
 
+    // TODO -- getName from database
+
     return c => {
         const { q: name } = parseDto(c.req.query());
 
         return c.html(
-            <Html head={{ title: "Home", baseUrl: c.req.url }}>
+            <Html head={{ title: "Home" }}>
                 <header>
                     <nav>
                         <ul>
@@ -40,7 +42,10 @@ export function handleIndex(): Handler {
                     </hgroup>
                 </main>
                 <footer>
-                    <small>Powered by <a hx-boost={false} href="https://deno.com">Deno</a></small>
+                    <small>
+                        Powered by <a hx-boost={false} href="https://deno.com">Deno</a>.
+                        Source code on <a hx-boost={false} href="https://github.com/adoublef/reliable-handbell">GitHub</a>
+                    </small>
                 </footer>
             </Html>
         );
