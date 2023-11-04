@@ -32,14 +32,6 @@ export const Html = ({
 
 export type HeadProps = {
     /**
-     * The <base> HTML element specifies the base URL to use for all 
-     * relative URLs in a document. There can be only one <base> 
-     * element in a document.
-     * 
-     * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base)
-     */
-    baseUrl: string;
-    /**
      * 
      * The <title> HTML element defines the document's title that is 
      * shown in a browser's title bar or a page's tab. It only contains 
